@@ -108,10 +108,17 @@ void MainWindow::open()
                 // Use fileName and fileContent
                 qDebug() << fileName << Qt::endl;
                 qDebug() << fileContent << Qt::endl;
+                QFile file(fileName);
+                file.open(QFile::WriteOnly | QFile::Text);
+                QTextStream out(&file);
+                out << fileContent << Qt::endl;
+                Qt::flush(out);
+                file.close();
+
                 // TODO use pragma WASM Here we have the file content not the QFile
                 // loadTextStream(fileContent);
                 // TODO use pragma WASM Desktop here we have some QFile able path
-                // loadFile(fileContent);
+                loadFile(fileName);
 
                 //&settings.setValue("loaddir", fileName);
 
@@ -291,10 +298,13 @@ bool MainWindow::maybeSave()
 }
 
 void MainWindow::loadFile(const  QString &fileName) {
+    qDebug() << fileName << "TEST" <<Qt::endl;
     QFile file(fileName);
+    qDebug() << fileName << Qt::endl;
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
         QMessageBox::warning(this, tr("QLumEdit"), tr("Cannot read file")
                                                    + QString(" %1:\n%2.").arg(fileName).arg(file.errorString()));
+        qDebug() << "FAILED" << fileName <<Qt::endl;
         return;
 
     }
@@ -305,7 +315,7 @@ void MainWindow::loadFile(const  QString &fileName) {
     try {
         QStringList warnings = ldt->loadFile(fileName);
         QStringList strings;
-
+        qDebug() << warnings << "ldt->loadFile" << Qt::endl;
         if(!warnings.isEmpty()) {
             QString warn = QString("<b>%1 ").arg(warnings.size()) + tr("warnings") + ":</b><br><br>";
 
@@ -327,6 +337,17 @@ void MainWindow::loadFile(const  QString &fileName) {
         QMessageBox::critical(this, tr("Cannot load file"), tr("Unknown error!"));
         return;
     }
+    saveAsAct->setEnabled(true);
+    exportSubMenu->setEnabled(true);
+
+    central = new MainTabWidget(*ldt, this);
+    setCentralWidget(central);
+
+    setMaybeSaveTriggers();
+
+    setCurrentFile(fileName);
+    statusBar()->showMessage(tr("File loaded"), 5000);
+
 }
 
 void MainWindow::loadTextStream(const  QByteArray &fileContent, const QString &fileName) {

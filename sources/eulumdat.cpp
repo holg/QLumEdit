@@ -85,7 +85,7 @@ int Eulumdat::getInt(QTextStream & text) {
 }
 
 QStringList Eulumdat::loadFile(QString fileName) {
-	
+    qDebug() << "Eulumdat::loadFile" << fileName << Qt::endl;
 	Reset();
 	Init();
 	
@@ -94,6 +94,7 @@ QStringList Eulumdat::loadFile(QString fileName) {
    	QTextStream in(&file);
 
    	sIden = in.readLine();
+    qDebug() << "Eulumdat::loadFile::sIden" << sIden << Qt::endl;
    	iItyp = getInt(in);
    	iIsym = getInt(in);
    	iNc = getInt(in);
