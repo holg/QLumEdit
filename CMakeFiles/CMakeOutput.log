@@ -1,0 +1,83 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Darwin - 21.6.0 - arm64
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
+Change Dir: /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_3e181/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_3e181.dir/build.make CMakeFiles/cmTC_3e181.dir/build
+gmake[1]: Entering directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3e181.dir/src.cxx.o
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++ -DHAVE_STDATOMIC  -sERROR_ON_UNDEFINED_SYMBOLS=0  -std=gnu++17 -MD -MT CMakeFiles/cmTC_3e181.dir/src.cxx.o -MF CMakeFiles/cmTC_3e181.dir/src.cxx.o.d -o CMakeFiles/cmTC_3e181.dir/src.cxx.o -c /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp/src.cxx
+em++: warning: linker setting ignored during compilation: 'ERROR_ON_UNDEFINED_SYMBOLS' [-Wunused-command-line-argument]
+Linking CXX executable cmTC_3e181.js
+/opt/homebrew/Cellar/cmake/3.24.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e181.dir/link.txt --verbose=1
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++   -sERROR_ON_UNDEFINED_SYMBOLS=0  @CMakeFiles/cmTC_3e181.dir/objects1.rsp -o cmTC_3e181.js 
+gmake[1]: Leaving directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+int main(int, char **)
+{
+    volatile std::atomic<char>    size_1;
+    volatile std::atomic<short>   size_2;
+    volatile std::atomic<int>     size_4;
+    volatile std::atomic<int64_t> size_8;
+
+    ++size_1;
+    ++size_2;
+    ++size_4;
+    ++size_8;
+
+    (void)size_1.load(std::memory_order_relaxed);
+    (void)size_2.load(std::memory_order_relaxed);
+    (void)size_4.load(std::memory_order_relaxed);
+    (void)size_8.load(std::memory_order_relaxed);
+
+    return 0;
+}
+Performing C++ SOURCE FILE Test HAVE_GETTIME succeeded with the following output:
+Change Dir: /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_98f46/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_98f46.dir/build.make CMakeFiles/cmTC_98f46.dir/build
+gmake[1]: Entering directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_98f46.dir/src.cxx.o
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++ -DHAVE_GETTIME  -sERROR_ON_UNDEFINED_SYMBOLS=0  -std=gnu++17 -MD -MT CMakeFiles/cmTC_98f46.dir/src.cxx.o -MF CMakeFiles/cmTC_98f46.dir/src.cxx.o.d -o CMakeFiles/cmTC_98f46.dir/src.cxx.o -c /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp/src.cxx
+em++: warning: linker setting ignored during compilation: 'ERROR_ON_UNDEFINED_SYMBOLS' [-Wunused-command-line-argument]
+Linking CXX executable cmTC_98f46.js
+/opt/homebrew/Cellar/cmake/3.24.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98f46.dir/link.txt --verbose=1
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++   -sERROR_ON_UNDEFINED_SYMBOLS=0  @CMakeFiles/cmTC_98f46.dir/objects1.rsp -o cmTC_98f46.js 
+gmake[1]: Leaving directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <unistd.h>
+#include <time.h>
+
+int main(int, char **) {
+    timespec ts; clock_gettime(CLOCK_REALTIME, &ts);
+}
+Performing C++ SOURCE FILE Test HAVE_EGL succeeded with the following output:
+Change Dir: /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/gmake -f Makefile cmTC_14afa/fast && /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_14afa.dir/build.make CMakeFiles/cmTC_14afa.dir/build
+gmake[1]: Entering directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_14afa.dir/src.cxx.o
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++ -DHAVE_EGL  -sERROR_ON_UNDEFINED_SYMBOLS=0  -std=gnu++17 -MD -MT CMakeFiles/cmTC_14afa.dir/src.cxx.o -MF CMakeFiles/cmTC_14afa.dir/src.cxx.o.d -o CMakeFiles/cmTC_14afa.dir/src.cxx.o -c /Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp/src.cxx
+em++: warning: linker setting ignored during compilation: 'ERROR_ON_UNDEFINED_SYMBOLS' [-Wunused-command-line-argument]
+Linking CXX executable cmTC_14afa.js
+/opt/homebrew/Cellar/cmake/3.24.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14afa.dir/link.txt --verbose=1
+/Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/em++   -sERROR_ON_UNDEFINED_SYMBOLS=0  @CMakeFiles/cmTC_14afa.dir/objects1.rsp -o cmTC_14afa.js 
+gmake[1]: Leaving directory '/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <EGL/egl.h>
+
+int main(int, char **) {
+    EGLint x = 0; EGLDisplay dpy = 0; EGLContext ctx = 0;
+    eglDestroyContext(dpy, ctx);
+}

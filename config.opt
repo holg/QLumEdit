@@ -1,0 +1,4 @@
+-prefix
+/opt/qt6
+-device-option
+QT_EMSCRIPTEN_ASYNCIFY=1

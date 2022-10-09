@@ -56,7 +56,7 @@ public:
 	QStringList loadFile(QString);
 	int saveFile(QString);
 	void calcMc();
-	
+    void saveImage(QString, int, int);
 	QStringList validate();
 	double downward();
 	double output();	

@@ -80,7 +80,8 @@ public:
     
     void setValidatorOptions();  
     void loadFile(const QString &fileName);
-            
+    void loadTextStream(const QByteArray &fileContent, const QString &fileName);
+
 };
 
 #endif

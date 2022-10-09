@@ -1,0 +1,4 @@
+/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/QLumEdit.dir
+/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/edit_cache.dir
+/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/rebuild_cache.dir
+/Users/htr/Documents/develeop/cplus/QLumEditWasm/CMakeFiles/QLumEdit_autogen.dir
