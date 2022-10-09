@@ -1411,6 +1411,9 @@ CMakeFiles/QLumEdit.dir/QLumEdit_autogen/mocs_compilation.cpp.o: \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/QLumEdit_autogen/EXY53EAHJJ/moc_mainwindow.cpp \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/QLumEdit_autogen/EXY53EAHJJ/../../sources/mainwindow.h \
   /Users/htr/Documents/develeop/cplus/qt6/qtbase/include/QtWidgets/QMainWindow \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/val.h \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cassert \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wire.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/QLumEdit_autogen/EXY53EAHJJ/moc_newdialog.cpp \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/QLumEdit_autogen/EXY53EAHJJ/../../sources/newdialog.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/QLumEdit_autogen/EXY53EAHJJ/moc_renderwidget.cpp \

@@ -1,7 +1,7 @@
 #include <QtWidgets>
 
 #include "mainwindow.h"
-
+#include <emscripten/val.h>
 #include "vars.h"
 #include "eulumdatwidget.h"
 #include "eulumdatwidget2.h"
@@ -15,6 +15,31 @@
 
 MainWindow::MainWindow()
 {
+    emscripten::val location = emscripten::val::global("location");
+    auto search = QString::fromStdString(location["search"].as<std::string>());
+    qDebug() << "href"  << search <<Qt::endl;
+    QString current_file = "";
+    if (search.contains("ldc_name")) {
+        auto ldc_name = search.split("ldc_name=")[1].split("&ldc_base64=")[0];
+        qDebug() << "ldc_name!" << ldc_name <<Qt::endl;
+        if (search.contains("ldc_base64")) {
+            QByteArray ldc_base64 = search.split("ldc_base64")[1].toUtf8();
+            QString ldc_content = QByteArray::fromBase64(ldc_base64);
+            qDebug() << "href"  << ldc_content <<Qt::endl;
+
+            QFile file(ldc_name);
+            file.open(QFile::WriteOnly | QFile::Text);
+            QTextStream out(&file);
+            out << ldc_content << Qt::endl;
+            Qt::flush(out);
+            file.close();
+            current_file = ldc_name;
+//            loadFile(ldc_name);
+
+        }
+
+
+    }
     Vars().mainWindow = this;
 
     mods = false;
@@ -28,7 +53,10 @@ MainWindow::MainWindow()
 
     readSettings();
     setValidatorOptions();
-    setCurrentFile("");
+    setCurrentFile(current_file);
+    if (current_file!= ""){
+        loadFile(current_file);
+    }
 }
 
 void MainWindow::about()

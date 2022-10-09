@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(application);
 
     QApplication app(argc, argv);
+    qDebug() << "ARGC" << argc <<Qt::endl;
+    qDebug() << "ARGV" << &argv <<Qt::endl;
 
     QSettings settings("Cagrinlabs", "QLumEdit");
     QString language = settings.value("lang", QString(QLocale::system().name())).toString();

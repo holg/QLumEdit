@@ -5,7 +5,7 @@
 
 #include "eulumdat.h"
 #include "maintabwidget.h"
-
+#include <emscripten/val.h>
 class QAction;
 class QMenu;
 class QTextEdit;

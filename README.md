@@ -35,14 +35,27 @@ English: https://github.com/cagrin
  German: https://sourceforge.net/users/erni24
 ```
 
+Online App
+
+https://eulumdat.icu
+
 ### CHANGELOG
 
-QLumEditWasm 0.1 )2022-10-09):
+QLumEditWasm 0.2 (2022-10-10)
 
+- Added URL reading and loading given name and ldc_content bas64 encoded, so a
+  Eulumdat can be loaded via URL (see gldf.icu, which creates eulumdat.icu urls
+  to view/edit the GLDF contained LDCs)
+- fixed emscripten Asyncify configuration
+
+0.1 (2022-10-09):
+
+- Updated to use QT6.5
 - created CMakeLists.txt and the CMake ToolChain needed for WebAssebmly using
   emscripten and the configured QT Source for using WebAssembly
-- changed header initial WIP WASM compatible Browser File Upload for uploading
-  Files instead of Open File from FileSystem
+- changed header
+- initial WIP WASM compatible Browser File Upload for uploading Files instead of
+  Open File from FileSystem
 
 1.0.3 (2021-10-06):
 

@@ -1398,5 +1398,8 @@ CMakeFiles/QLumEdit.dir/sources/main.cpp.o: \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/eulumdatwidget4.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/eulumdattablewidget.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/renderwidget.h \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/val.h \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cassert \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wire.h \
   /Users/htr/Documents/develeop/cplus/qt6/qtbase/include/QtCore/QTranslator \
   /Users/htr/Documents/develeop/cplus/qt6/qtbase/include/QtCore/QLocale

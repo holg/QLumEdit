@@ -240,7 +240,19 @@ int Eulumdat::saveFile(QString fileName) {
 	
     Qt::flush(out);
 	file.close();
-	
+    // TODO make it downloadable Qfile::open(fileName)
+    QFile download_file(fileName);
+    download_file.open(QFile::ReadOnly | QFile::Text);
+//    if (!download_file.open(QFile::ReadOnly | QFile::Text)) {
+//        QMessageBox::warning(this, tr("QLumEdit"), tr("Cannot read file")
+//                                                   + QString(" %1:\n%2.").arg(fileName).arg(download_file.errorString()));
+//        qDebug() << "FAILED" << fileName <<Qt::endl;
+//        return;
+//    }
+    QByteArray fileContent = download_file.readAll();
+    qDebug()<< "Download Content" << fileContent  <<Qt::endl;
+    QFileDialog::saveFileContent(fileContent, fileName);
+    file.close();
 	return 0;
 }
 

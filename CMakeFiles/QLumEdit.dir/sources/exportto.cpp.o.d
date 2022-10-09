@@ -1397,6 +1397,9 @@ CMakeFiles/QLumEdit.dir/sources/exportto.cpp.o: \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/eulumdatwidget4.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/eulumdattablewidget.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/renderwidget.h \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/val.h \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/cassert \
+  /Users/htr/Documents/develeop/cplus/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wire.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/vars.h \
   /Users/htr/Documents/develeop/cplus/QLumEditWasm/sources/configtabdialog.h \
   /Users/htr/Documents/develeop/cplus/qt6/qtbase/include/QtWidgets/QDialog \
